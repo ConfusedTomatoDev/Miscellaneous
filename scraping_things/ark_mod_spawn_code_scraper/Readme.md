@@ -12,7 +12,8 @@ Item Spawn Command: cheat giveitem "Blueprint'/Game/Mods/LethalReusable/BloodExt
 BloodExtractor_LR,Lethals Reusables,cheat giveitem "Blueprint'/Game/Mods/LethalReusable/BloodExtractor_LR.BloodExtractor_LR'" 1 0 0,,
 ```
 
-```python3 arkacs.py
+```
+python3 arkacs.py
 Enter URL of page with spawn commands: https://steamcommunity.com/workshop/filedetails/discussion/1967741708/1744516107488290239/
 URL Provided: https://steamcommunity.com/workshop/filedetails/discussion/1967741708/1744516107488290239/
 Collecting commands
