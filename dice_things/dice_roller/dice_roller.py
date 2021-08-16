@@ -1,6 +1,7 @@
 # Basic Dice rolling code, feel free to use for your own needs.
 # Rolls a x sided dice x times for x turns.
-# Created 08/16/2021
+# Developer: ConfusedTomatoDev
+# Created 08/16/2021 CTD
 #
 from random import randint
 
@@ -28,3 +29,4 @@ while count_turns != turns+1:
     print ("\nRoll", count_turns,"\n")
     roll_dice()
     count_turns += 1
+   
