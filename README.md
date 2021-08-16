@@ -1,4 +1,4 @@
-# Welcome to my code pile!
+# Welcome to my miscellaneous code pile!
 
 This is where the little random code snippets end up.  
 
