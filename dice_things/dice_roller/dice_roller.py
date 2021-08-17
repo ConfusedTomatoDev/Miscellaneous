@@ -1,7 +1,7 @@
 # Basic Dice rolling code, feel free to use for your own needs.
 # Rolls a x sided dice x times for x turns.
 # Developer: ConfusedTomatoDev
-# Created 08/16/2021
+# Created 08/16/2021 CTD
 #
 from random import randint
 
@@ -24,12 +24,13 @@ def roll_dice():
     print ("Rolling")
     while roll_count < dice_rolls:
         roll = (randint(1,dice_sides))
-        print (roll)
+        # Uncomment line below if you need vertical list of rolls
+        #print (roll)
         roll_count += 1
         average_list.append(roll)
         
 # Main routine
-while count_turns != turns+1:
+while count_turns != turns+2:
     #print("List", average_list)
     print("Rolls " + ", ".join(map(str, average_list)))
     #print ("Averaging")
