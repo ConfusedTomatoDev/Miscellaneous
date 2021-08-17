@@ -16,12 +16,12 @@ turns = 5
 
 # Counters and lists
 count_turns = 1
-average_list = [0]
+average_list = []
 
 # Functions
 def roll_dice():
     roll_count = 0
-    print ("Rolling")
+    print ("Rolling...")
     while roll_count < dice_rolls:
         roll = (randint(1,dice_sides))
         # Uncomment line below if you need vertical list of rolls
@@ -30,15 +30,14 @@ def roll_dice():
         average_list.append(roll)
         
 # Main routine
-while count_turns != turns+2:
-    #print("List", average_list)
-    print("Rolls " + ", ".join(map(str, average_list)))
+while count_turns != turns+1:
+    print("Turn:", count_turns)
+    roll_dice()
+    print("Rolls: " + ", ".join(map(str, average_list)))
     #print ("Averaging")
     average_total = sum(average_list) / len(average_list)
     #print ("Done averaging")
-    print("Average", round(average_total))
+    print("Average:", round(average_total))
     print("============================\n")
-    print("Turn", count_turns)
     average_list.clear()
-    roll_dice()
     count_turns += 1
