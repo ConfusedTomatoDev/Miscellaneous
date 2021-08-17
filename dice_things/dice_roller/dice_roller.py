@@ -1,7 +1,7 @@
 # Basic Dice rolling code, feel free to use for your own needs.
 # Rolls a x sided dice x times for x turns.
 # Developer: ConfusedTomatoDev
-# Created 08/16/2021 CTD
+# Created 08/16/2021
 #
 from random import randint
 
