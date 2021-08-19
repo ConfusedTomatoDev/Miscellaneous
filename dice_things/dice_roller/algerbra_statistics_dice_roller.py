@@ -57,7 +57,6 @@ count_turns = 1
 roll_list = []
 average_list = []
 
-
 # Classes/Objects
 # None yet
 
@@ -72,7 +71,6 @@ def roll_dice():
 		roll_count += 1
 		roll_list.append(roll)
 
-
 def CountFrequency(average_list):
 	# Creating an empty dictionary
 	freq = {}
@@ -85,22 +83,27 @@ def CountFrequency(average_list):
 		#print (key ,"     ", value)
 		print(f'{key:3d}    {value:3d}')
 
-
 # Main routine
 while count_turns != turns + 1:
 	print("Turn number:", count_turns)
+    # Call the roll_dice functions
 	roll_dice()
-	print("Roll: " + ", ".join(map(str, roll_list)))
+	# Print each roll and join them to the roll_list
+    print("Roll: " + ", ".join(map(str, roll_list)))
+    # Sort and print the roll_list
 	roll_list.sort()
+    # Print a sorted roll_list
 	print("Sorted Roll: " + ", ".join(map(str, roll_list)))
-	#print("Done Rolling, calculating...")
-	#print ("Averaging...")
+	# Determine the average of the roll_list
 	average_ans = sum(roll_list) / len(roll_list)
+    # Add the average roll_list answer to the average_list and round
 	average_list.append(round(average_ans))
-	#print ("Done averaging...")
+	# Print the average of roll_list
 	print("Average of roll:", round(average_ans))
 	print("\n")
+    # Print the average of each roll_list
 	print("Average each turn: " + ", ".join(map(str, average_list)))
+    # print a sorted average_list
 	average_list.sort()
 	print("Sorted average of each turn: " + ", ".join(map(str, average_list)))
 	print("\n")
