@@ -15,48 +15,39 @@ import numpy as npmath
 from random import randint
 from statistics import mean
 
-# Pick the number of dice sides
-##dice_sides = 20
-
-# Pick the number of rolls per turn
-##dice_rolls = 20
-
-# Pick the number of turns
-##turns = 20
-
-# input age
+# Input dice info
 while True:
   try:
-    dice_sides = int(input("Enter number of sides on the dice: ")) 
+    dice_sides = int(input("Enter number of sides on the dice: "))
     if dice_sides>1 and dice_sides<=120:
       print("Dice sides entered successfully...")
       break;
     else:
-      print("Disce sides should be greater than 1 and equal to or less than 120...")      
+      print("Disce sides should be greater than 1 and equal to or less than 120...")
   except ValueError:
     print("Provide an numeric value only...")
     continue
 
 while True:
   try:
-    dice_rolls = int(input("Enter number of times to roll the dice between turns: ")) 
+    dice_rolls = int(input("Enter number of times to roll the dice between turns: "))
     if dice_rolls>0 and dice_rolls<=1000:
       print("Dice rolls entered successfully...")
       break;
     else:
-      print("Disce sides should be greater than 0 and equal to or less than 1000...")      
+      print("Disce sides should be greater than 0 and equal to or less than 1000...")
   except ValueError:
     print("Provide an numeric value only...")
     continue
 
 while True:
   try:
-    turns = int(input("Enter number of turns to roll the dice: ")) 
+    turns = int(input("Enter number of turns to roll the dice: "))
     if turns>0 and turns<=1000:
       print("Dice turns entered successfully...")
       break;
     else:
-      print("Disce turns should be greater than 0 and equal to or less than 1000...")      
+      print("Disce turns should be greater than 0 and equal to or less than 1000...")
   except ValueError:
     print("Provide an numeric value only...")
     continue
@@ -115,7 +106,7 @@ while count_turns != turns + 1:
 	print("\n")
 	print("Minimum value of average turns:", min(average_list))
 	print("Rounded minimum value of average turns:", round(min(average_list)))
-	print("\n")	
+	print("\n")
 	print("Q1 quantile of average turns: ", npmath.quantile(average_list, .25))
 	print("Rounded Q1 quantile of average turns: ", round(npmath.quantile(average_list, .25)))
 	print("Q2 quantile of average turns: ", npmath.quantile(average_list, .50))
