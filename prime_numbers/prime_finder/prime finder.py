@@ -33,5 +33,5 @@ def print_primes_till_N(N):
 			print(prime_check, end = " ");
 
 # Main routine
-N = 1000;
+N = 100;
 print_primes_till_N(N);
