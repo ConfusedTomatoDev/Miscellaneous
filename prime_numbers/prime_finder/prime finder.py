@@ -9,7 +9,7 @@
 def print_primes_till_N(N):
 
 	# Define the variables
-	i, j, flag = 0, 0, 0;
+	i, ct, flag = 0, 0, 0;
 
 	# Print display message
 	print("Found these prime numbers between 1 and",N , "are:");
@@ -24,8 +24,8 @@ def print_primes_till_N(N):
 		# Mark variable and check see if it is prime or not
 		flag = 1;
 
-		for j in range(2, ((i // 2) + 1), 1):
-			if (i % j == 0):
+		for ct in range(2, ((i // 2) + 1), 1):
+			if (i % ct == 0):
 				flag = 0;
 				break;
 		# flag = 1 means  it is prime and flag = 0 means it is not prime
