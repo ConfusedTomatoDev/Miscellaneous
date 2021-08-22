@@ -48,7 +48,7 @@ hardstatus alwayslastline
 #hardstatus string "%{= gk}%H |[%`]|%{= gk}%{-}%-Lw%{= yk}%n%f%t%{-}%+Lw%{= ck}%=%{= yk}%C%a %M-%d-%Y"
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m/%d/%y %{W}%C:%s%a %{g}]'
 
-#
+# Info for coloring up and customizing you environment...
 # http://www.gnu.org/software/screen/manual/html_node/String-Escapes.html
 #
 # %{= wK} : set colors to bright white (W) on bright black (K) and keep current text styles (=)
