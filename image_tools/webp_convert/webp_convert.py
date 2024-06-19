@@ -6,10 +6,11 @@
 ##    to convert webp images to jpg AND optionally strip EXIF Data.
 ##
 ##    webp_convert.py
-##    1. Place images to convert in Downloads/convert 
+##    1. Place images to convert in Downloads/convert/
 ##    1a. Or update the code to use your own folder. 
 ##    2. Answering "Y" will remove EXIF for all, or "y" for a single file.
 ##    3. Answering "N" will NOT removed EXIF for all, or "n" for a single file.
+##    4. Converted images will be placed in Downloads/convert/converted/
 ## 
 #################################################################################
 
@@ -41,6 +42,13 @@ def convert_image(webp_image_path, jpg_image_path, strip_exif):
 def process_images():
     # Define the path to the folder containing WEBP images
     downloads_folder = os.path.join(os.path.expanduser("~"), "Downloads", "convert")
+
+    # Define the path to the output folder for converted images
+    converted_folder = os.path.join(os.path.expanduser("~"), "Downloads", "convert", "converted")
+
+    # Create the converted folder if it doesn't exist
+    if not os.path.exists(converted_folder):
+        os.makedirs(converted_folder)
 
     # Get a list of all WEBP images in the folder
     webp_images = [f for f in os.listdir(downloads_folder) if f.endswith('.webp')]
@@ -85,7 +93,7 @@ def process_images():
                 strip_exif = apply_all
 
             # Convert the image to JPG format
-            jpg_image_path = os.path.join(downloads_folder, webp_image.replace(".webp", ".jpg"))
+            jpg_image_path = os.path.join(converted_folder, webp_image.replace(".webp", ".jpg"))
             convert_image(webp_image_path, jpg_image_path, strip_exif)
 
             print(f"Converted {webp_image_path} to {jpg_image_path}")
@@ -94,3 +102,4 @@ def process_images():
 
 if __name__ == "__main__":
     process_images()
+    
