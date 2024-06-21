@@ -46,9 +46,9 @@ try:
     while True:
         print(f"#### {curtime} ####")
         print(f"{timestamp()} - Interval Start")
-        os.system(f"ifdown {interface}")
         interval = random.randint(minint, maxint)
         print(f"Start selected downtime {interval}")
+        os.system(f"ifdown {interface}")
         time.sleep(interval)
         os.system(f"ifup {interface}")
         print(f"{timestamp()} - End selected downtime")
